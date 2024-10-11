@@ -1,0 +1,146 @@
+{
+  "folders": [
+    {
+      "name": "Materials",
+      "subcategories": [
+        {
+          "name": "Ascention Materials",
+          "directory": "/Files/Ascention Materials",
+          "files": [
+            { "name": "Material 1", "filename": "HuTao_BG.jpeg" },
+            { "name": "Material 2", "filename": "Stress.txt" }
+          ]
+        },
+        {
+          "name": "Talent Materials",
+          "directory": "/Files/Talent Materials",
+          "files": [
+            { "name": "Talent Book 1", "filename": "talent1.png" },
+            { "name": "Talent Book 2", "filename": "talent2.png" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Teams",
+      "subcategories": [
+        {
+          "name": "Double Hydro",
+          "directory": "/Files/Double Hydro",
+          "files": [
+            { "name": "Double Hydro Strategy", "filename": "double_hydro.png" }
+          ]
+        },
+        {
+          "name": "Geo Vaporize",
+          "directory": "/Files/Geo Vaporize",
+          "files": [
+            { "name": "Geo Vaporize Build", "filename": "geo_vaporize.png" }
+          ]
+        },
+        {
+          "name": "F2P Option",
+          "directory": "/Files/F2P Option",
+          "files": [
+            { "name": "F2P Team Guide", "filename": "f2p_guide.pdf" }
+          ]
+        },
+        {
+          "name": "Premium Team",
+          "directory": "/Files/Premium Team",
+          "files": [
+            { "name": "Premium Team Guide", "filename": "premium_team.pdf" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Weapons",
+      "subcategories": [
+        {
+          "name": "5 Star",
+          "directory": "/Files/5 Star",
+          "files": [
+            { "name": "5 Star Sword", "filename": "5_star_sword.png" },
+            { "name": "5 Star Bow", "filename": "5_star_bow.png" }
+          ]
+        },
+        {
+          "name": "4 Star",
+          "directory": "/Files/4 Star",
+          "files": [
+            { "name": "4 Star Spear", "filename": "4_star_spear.png" }
+          ]
+        },
+        {
+          "name": "3 Star",
+          "directory": "/Files/3 Star",
+          "files": [
+            { "name": "3 Star Claymore", "filename": "3_star_claymore.png" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Artifacts",
+      "subcategories": [
+        {
+          "name": "Crimson Witch",
+          "directory": "/Files/Crimson Witch",
+          "files": [
+            { "name": "Crimson Witch Flower", "filename": "crimson_flower.png" },
+            { "name": "Crimson Witch Sands", "filename": "crimson_sands.png" }
+          ]
+        },
+        {
+          "name": "Shimenawa's",
+          "directory": "/Files/Shimenawa's",
+          "files": [
+            { "name": "Shimenawa's Flower", "filename": "shimenawa_flower.png" }
+          ]
+        },
+        {
+          "name": "Marechaussee Hunter",
+          "directory": "/Files/Marechaussee Hunter",
+          "files": [
+            { "name": "Marechaussee Flower", "filename": "marechaussee_flower.png" }
+          ]
+        },
+        {
+          "name": "The Exile",
+          "directory": "/Files/The Exile",
+          "files": [
+            { "name": "Exile Goblet", "filename": "exile_goblet.png" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Others",
+      "subcategories": [
+        {
+          "name": "Pros",
+          "directory": "/Files/Pros",
+          "files": [
+            { "name": "Pros Document", "filename": "pros.txt" }
+          ]
+        },
+        {
+          "name": "Cons",
+          "directory": "/Files/Cons",
+          "files": [
+            { "name": "Cons Document", "filename": "cons.txt" }
+          ]
+        },
+        {
+          "name": "Artworks",
+          "directory": "/Files/Artworks",
+          "files": [
+            { "name": "Art 1", "filename": "art1.png" },
+            { "name": "Art 2", "filename": "art2.png" }
+          ]
+        }
+      ]
+    }
+  ]
+}

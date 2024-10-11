@@ -1,20 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Modern File Archive</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GWS-Archive</title>
+
+    <!-- Favicon for the website -->
+    <link rel="icon" href="/Data/Images/Logo.png" type="image/png">
+
+    <!-- Open Graph meta tags for social sharing -->
+    <meta property="og:title" content="GWS-Archive">
+    <meta property="og:description" content="List of Stuff for GWS">
+    <meta property="og:image" content="assets/Images/HuTao-Banner.jpeg">
+    <meta property="og:type" content="website">
+
+    <!-- Link to the stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>File Archive</h1>
-    <!-- Search bar -->
-    <input type="text" id="search" placeholder="Search files..." onkeyup="filterFiles()" />
-    
-    <!-- File grid -->
-    <div id="file-grid" class="file-grid"></div>
-  </div>
-  <script src="script.js"></script>
+    <div class="wrapper">
+        <!-- Sidebar with categories -->
+        <aside class="sidebar">
+            <h2>Folders</h2>
+            <ul id="folder-list">
+                <!-- Folders will be dynamically loaded here -->
+            </ul>
+        </aside>
+
+        <!-- Main content area -->
+        <main class="content">
+            <h1>GWS-Archive</h1>
+            <div class="search-bar">
+                <input type="text" id="search" placeholder="Search files..." autocomplete="off" oninput="filterFiles()">
+                <button id="searchButton" onclick="filterFiles()">Search</button>
+            </div>            
+
+            <!-- File grid to display files and folders -->
+            <div id="file-grid" class="file-grid">
+                <!-- Files and folders will be dynamically loaded here -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Popup for initial user interaction -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <img src="Data/Images/Logo.svg" alt="Hu Tao">
+                <h2>Welcome to this Archive!</h2>
+            </div>
+            <p>This website is still a work in progress, but we're hoping to fill it with great stuff.</p>
+            <p>Not planning on making this site look good on mobile. Cry about it.</p>
+            <button id="popup-close" class="popup-close">&times;</button>
+        </div>
+    </div>
+
+    <!-- Link to the JavaScript file -->
+    <script src="script.js"></script>
 </body>
 </html>
