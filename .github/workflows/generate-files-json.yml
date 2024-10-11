@@ -18,12 +18,9 @@ jobs:
       with:
         node-version: '14'
 
-    - name: Install dependencies
-      run: npm install
-
     - name: Generate files.json
       run: |
-        node generate-files-json.js
+        node generate-files-json.js  # Ensure this file exists and is committed
 
     - name: Commit and push changes
       run: |
