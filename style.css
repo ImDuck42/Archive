@@ -18,7 +18,6 @@
     --nord15: #b48ead;
   }
   
-  /* General styling */
   body {
     background-color: var(--nord0);
     color: var(--nord6);
@@ -37,33 +36,58 @@
     background-color: var(--nord1);
     padding: 20px;
     border-radius: 8px;
-    width: 80%;
-    max-width: 800px;
+    width: 90%;
+    max-width: 1000px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
   
   /* Title styling */
   h1 {
     color: var(--nord8);
+    margin-bottom: 20px;
   }
   
-  /* File list styling */
-  .file-list {
-    margin-top: 20px;
+  /* Search bar styling */
+  #search {
+    width: 100%;
+    padding: 12px 20px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: var(--nord2);
+    color: var(--nord6);
+    border: 1px solid var(--nord4);
+    border-radius: 4px;
   }
   
-  .file-list a {
-    display: block;
+  /* File grid styling */
+  .file-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+  }
+  
+  .file-grid a {
     background-color: var(--nord2);
     color: var(--nord6);
     text-decoration: none;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 4px;
+    padding: 15px;
+    border-radius: 8px;
     transition: background-color 0.3s ease;
+    word-wrap: break-word;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
-  .file-list a:hover {
+  .file-grid a:hover {
     background-color: var(--nord3);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .file-grid {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
   }
   
