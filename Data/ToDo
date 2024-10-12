@@ -1,2 +1,153 @@
 Fix filesearch hre url
 change color pallet using :root
+
+-----------------------------------Test new .jsnon structure--------------------------------------------
+have the category be a folder for less of a structure mess
+
+{
+  "folders": [
+    {
+      "name": "Materials",
+      "subcategories": [
+        {
+          "name": "Ascention Materials",
+          "directory": "/Files/Materials/Ascention Materials",
+          "files": [
+            { "name": "Material 1", "filename": "HuTao_BG.jpeg" },
+            { "name": "Material 2", "filename": "Stress.txt" }
+          ]
+        },
+        {
+          "name": "Talent Materials",
+          "directory": "/Files/Materials/Talent Materials",
+          "files": [
+            { "name": "Talent Book 1", "filename": "talent1.png" },
+            { "name": "Talent Book 2", "filename": "talent2.png" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Teams",
+      "subcategories": [
+        {
+          "name": "Double Hydro",
+          "directory": "/Files/Teams/Double Hydro",
+          "files": [
+            { "name": "Double Hydro Strategy", "filename": "double_hydro.png" }
+          ]
+        },
+        {
+          "name": "Geo Vaporize",
+          "directory": "/Files/Teams/Geo Vaporize",
+          "files": [
+            { "name": "Geo Vaporize Build", "filename": "geo_vaporize.png" }
+          ]
+        },
+        {
+          "name": "F2P Option",
+          "directory": "/Files/Teams/F2P Option",
+          "files": [
+            { "name": "F2P Team Guide", "filename": "f2p_guide.pdf" }
+          ]
+        },
+        {
+          "name": "Premium Team",
+          "directory": "/Files/Teams/Premium Team",
+          "files": [
+            { "name": "Premium Team Guide", "filename": "premium_team.pdf" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Weapons",
+      "subcategories": [
+        {
+          "name": "5 Star",
+          "directory": "/Files/Weapons/5 Star",
+          "files": [
+            { "name": "5 Star Sword", "filename": "5_star_sword.png" },
+            { "name": "5 Star Bow", "filename": "5_star_bow.png" }
+          ]
+        },
+        {
+          "name": "4 Star",
+          "directory": "/Files/Weapons/4 Star",
+          "files": [
+            { "name": "4 Star Spear", "filename": "4_star_spear.png" }
+          ]
+        },
+        {
+          "name": "3 Star",
+          "directory": "/Files/Weapons/3 Star",
+          "files": [
+            { "name": "3 Star Claymore", "filename": "3_star_claymore.png" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Artifacts",
+      "subcategories": [
+        {
+          "name": "Crimson Witch",
+          "directory": "/Files/Artifacts/Crimson Witch",
+          "files": [
+            { "name": "Crimson Witch Flower", "filename": "crimson_flower.png" },
+            { "name": "Crimson Witch Sands", "filename": "crimson_sands.png" }
+          ]
+        },
+        {
+          "name": "Shimenawa's",
+          "directory": "/Files/Artifacts/Shimenawa's",
+          "files": [
+            { "name": "Shimenawa's Flower", "filename": "shimenawa_flower.png" }
+          ]
+        },
+        {
+          "name": "Marechaussee Hunter",
+          "directory": "/Files/Artifacts/Marechaussee Hunter",
+          "files": [
+            { "name": "Marechaussee Flower", "filename": "marechaussee_flower.png" }
+          ]
+        },
+        {
+          "name": "The Exile",
+          "directory": "/Files/Artifacts/The Exile",
+          "files": [
+            { "name": "Exile Goblet", "filename": "exile_goblet.png" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Others",
+      "subcategories": [
+        {
+          "name": "Pros",
+          "directory": "/Files/Others/Pros",
+          "files": [
+            { "name": "Pros Document", "filename": "pros.txt" }
+          ]
+        },
+        {
+          "name": "Cons",
+          "directory": "/Files/Others/Cons",
+          "files": [
+            { "name": "Cons Document", "filename": "cons.txt" }
+          ]
+        },
+        {
+          "name": "Artworks",
+          "directory": "/Files/Others/Artworks",
+          "files": [
+            { "name": "Art 1", "filename": "art1.png" },
+            { "name": "Art 2", "filename": "art2.png" }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
