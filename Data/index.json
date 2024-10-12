@@ -5,7 +5,7 @@
       "subcategories": [
         {
           "name": "ToDo",
-          "directory": "/Files/ToDo",
+          "directory": "/Data/ToDo",
           "files": [
             { "name": "ToDo", "filename": "ToDo.txt" },
           ]
