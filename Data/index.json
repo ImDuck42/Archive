@@ -5,7 +5,7 @@
       "subcategories": [
         {
           "name": "Ascention Materials",
-          "directory": "Archive/Files/Ascention Materials",
+          "directory": "Files/Ascention Materials",
           "files": [
             { "name": "Material 1", "filename": "HuTao_BG.jpeg" },
             { "name": "Material 2", "filename": "Stress.txt" }
