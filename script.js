@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (files.length === 0) {
             fileGrid.innerHTML = '<p>No matching files found.</p>'; // Show a message if no files match
             const noItemsFound = document.createElement('img');
-            noItemsFound.src = '/Data/Images/Nope.png'; // Set the path to your image
+            noItemsFound.src = 'Data/Images/Nope.png'; // Set the path to your image
             fileGrid.appendChild(noItemsFound); // Add image to the grid
             return;
         }
