@@ -116,13 +116,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const query = document.getElementById('search').value.toLowerCase(); // Get the search query
         const fileGrid = document.getElementById('file-grid'); // Get the file grid element
         fileGrid.innerHTML = ''; // Clear the file grid before adding new items
-
+    
         // Fetch the index.json file
         fetch('Data/index.json')
             .then(response => response.json())
             .then(data => {
                 let matchingFiles = []; // Array to store matching files
-
+    
                 // Loop through each folder and subcategory
                 data.folders.forEach(folder => {
                     folder.subcategories.forEach(subcategory => {
@@ -134,14 +134,14 @@ document.addEventListener('DOMContentLoaded', () => {
                                 if (file.name.toLowerCase().includes(query)) {
                                     matchingFiles.push({
                                         name: file.name,
-                                        path: `${subcategory.directory}/${file.filename}` // Construct the correct path
+                                        path: `/Archive/${subcategory.directory}/${file.filename}` // Updated path with /Archive
                                     });
                                 }
                             });
                         }
                     });
                 });
-
+    
                 displayMatchingFiles(matchingFiles); // Display the collected matching files
             })
             .catch(error => console.error('Error loading index.json:', error));
