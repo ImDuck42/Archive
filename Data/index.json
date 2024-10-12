@@ -1,13 +1,12 @@
 {
   "folders": [
-    {
       "name": "Informations",
       "subcategories": [
         {
           "name": "ToDo",
-          "directory": "/Data/ToDo",
+          "directory": "/Data",
           "files": [
-            { "name": "ToDo", "filename": "ToDo.txt" },
+            { "name": "ToDo List", "filename": "ToDo.txt" }
           ]
         }
       ]
