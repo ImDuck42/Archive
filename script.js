@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function loadFiles(subcategoryName, files) {
         // Clear the current grid before adding new items
         fileGrid.innerHTML = '';
-
+    
         // Iterate over each file and create elements for the grid
         files.forEach(file => {
             const fileItem = document.createElement('div');
@@ -103,14 +103,14 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // Create content for the file item (e.g., an image or a file link)
             const fileLink = document.createElement('a');
-            fileLink.href = `/Files/${subcategoryName}/${file.filename}`;   // Correct path to the file
+            fileLink.href = `/Archive/Files/${subcategoryName}/${file.filename}`;   // Updated path to the file
             fileLink.textContent = file.name; // Display file name
             
             fileItem.appendChild(fileLink);
             fileGrid.appendChild(fileItem);
         });
     }
-
+    
     // Search and filter files by name from index.json
     window.filterFiles = function() {
         const query = document.getElementById('search').value.toLowerCase(); // Get the search query
