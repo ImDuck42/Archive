@@ -1,18 +1,6 @@
 {
   "folders": [
     {
-      "name": "Informations",
-      "subcategories": [
-        {
-          "name": "ToDo",
-          "directory": "/Data",
-          "files": [
-            { "name": "ToDo List", "filename": "ToDo.txt" }
-          ]
-        }
-      ]
-    },
-    {
       "name": "Materials",
       "subcategories": [
         {
