@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // Create content for the file item (e.g., an image or a file link)
             const fileLink = document.createElement('a');
-            fileLink.href = `/Files/${subcategoryName}/${file.filename}`;   // Correct path to the file
+            fileLink.href = `Archive/Files/${subcategoryName}/${file.filename}`;   // Correct path to the file
             fileLink.textContent = file.name; // Display file name
             
             fileItem.appendChild(fileLink);
