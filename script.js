@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Determine base URL depending on the environment (localhost or GitHub Pages)
-    const baseUrl = window.location.href.includes('github.io') ? '/YourRepositoryName' : '';
+    const baseUrl = window.location.href.includes('github.io') ? '/Archive' : '';
 
     const popup = document.getElementById('popup');
     const popupClose = document.getElementById('popup-close');
