@@ -1,84 +1,103 @@
-/* General Styles */
+/* Darkened Nord Theme */
+:root {
+    --nord0: #1a1f29; /* Very dark background */
+    --nord1: #202531; /* Slightly lighter dark background */
+    --nord2: #282e3b; /* Even lighter dark for contrast */
+    --nord3: #3b4252; /* Soft border color */
+    --nord4: #4c566a; /* Muted gray for text */
+    --nord5: #5a6478; /* Slightly lighter muted gray */
+    --nord6: #d8dee9; /* Dimmed light text */
+    --nord7: #616f88; /* Muted dark teal */
+    --nord8: #506073; /* Muted blue-gray */
+    --nord9: #445366; /* Muted blue */
+    --nord10: #373f52; /* Very dark muted blue */
+    --nord11: #8a4754; /* Muted dark red */
+    --nord12: #a65e47; /* Muted dark orange */
+    --nord13: #8e7b45; /* Muted dark yellow */
+    --nord14: #5f7250; /* Muted dark green */
+    --nord15: #6b5b7a; /* Muted dark purple */
+}
+
 body {
-    background-color: #1b1b1b; /* Dark background */
-    color: #d7a1a6; /* Light pink text */
+    background-color: var(--nord0); /* Darkest background */
+    color: var(--nord5); /* Muted gray text */
     font-family: 'Noto Serif', serif; /* Elegant font */
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    justify-content: center;
+    align-items: center;
     min-height: 100vh;
-    overflow: hidden; /* Remove global scrollbars */
+    overflow: hidden;
 }
 
 .wrapper {
     display: flex;
-    width: 100vw; /* Full viewport width */
-    height: 100vh; /* Full viewport height */
-    background-color: #2d1b1f; /* Darker background */
-    border-radius: 0.5rem; /* Rounded corners */
-    overflow: hidden; /* Prevent overflow */
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--nord1); /* Darker muted background */
+    border-radius: 0.5rem;
+    overflow: hidden;
 }
 
 /* Sidebar Styles */
 .sidebar {
-    width: 20%; /* Sidebar width */
-    height: calc(100vh - 2rem); /* Full height minus margins */
+    width: 20%;
+    height: calc(100vh - 2rem);
     margin: 1%;
-    padding: 1.5%; /* Reduce padding for more compact design */
-    border: 0.2rem solid #d7a1a6; /* Light pink border */
+    padding: 1.5%;
+    border: 0.2rem solid var(--nord3); /* Soft border */
     border-radius: 0.5rem;
-    background-color: #2d1b1f; /* Match wrapper background */
+    background-color: var(--nord1);
     box-sizing: border-box;
-    position: relative; /* For absolute positioning of scrollbar suppression */
-    overflow-y: auto; /* Vertical scroll */
-    scrollbar-width: none; /* Hide scrollbar in Firefox */
+    position: relative;
+    overflow-y: auto;
+    scrollbar-width: none;
 }
 
 .sidebar::-webkit-scrollbar {
-    display: none; /* Hide scrollbar in Webkit browsers */
+    display: none;
 }
 
 .sidebar h2 {
     margin-top: auto;
-    padding-bottom: 0.4rem; /* Reduce padding for a tighter look */
+    padding-bottom: 0.4rem;
     text-align: center;
-    font-size: 2.5rem; /* Slightly smaller font size */
-    color: #f5a8a1; /* Lighter pink color */
-    border-bottom: 2px solid #f5a8a1; /* Underline */
-    position: sticky; /* Sticky title */
+    font-size: 2.5rem;
+    color: var(--nord7); /* Muted dark teal for heading */
+    border-bottom: 2px solid var(--nord7); /* Underline with dark teal */
+    position: sticky;
     top: 0;
-    background: #2d1b1f; /* Match sidebar background */
-    z-index: 1; /* Above other content */
+    background: var(--nord1);
+    z-index: 1;
 }
 
 .sidebar ul {
     margin: 0;
-    padding-left: 1.5rem; /* Reduce indentation */
+    padding-left: 1.5rem;
 }
 
 .sidebar ul li {
-    margin: 0.3rem 0; /* Reduce vertical spacing between items */
+    margin: 0.3rem 0;
     font-weight: bold;
 }
 
 .sidebar ul li a,
 .toggle-button {
     display: block;
-    padding: 0.5rem 0.8rem; /* Reduce padding */
-    margin: 0.3rem 0; /* Reduce vertical spacing */
-    font-size: 1.2rem; /* Slightly smaller font size */
-    color: #d7a1a6; /* Light color for links */
+    padding: 0.5rem 0.8rem;
+    margin: 0.3rem 0;
+    font-size: 1.2rem;
+    color: var(--nord4); /* Dimmed gray for links */
     text-decoration: none;
-    border-radius: 0.3rem; /* Slightly reduce border radius */
-    transition: background-color 0.3s, color 0.3s; /* Smooth transitions */
+    border-radius: 0.3rem;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .sidebar ul li a:hover,
 .toggle-button:hover {
-    background-color: #5b3a3a; /* Slightly less bright pink */
-    color: #2d1b1f; /* Dark text color on hover */
+    background-color: var(--nord9); /* Muted dark blue on hover */
+    color: var(--nord0); /* Dark text color on hover */
 }
 
 .toggle-button {
@@ -86,55 +105,55 @@ body {
     cursor: pointer;
     background: none;
     border: none;
-    font-size: 1.5rem; /* Slightly smaller font size */
+    font-size: 1.5rem;
     font-weight: bold;
     display: flex;
     align-items: center;
-    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .toggle-button:active {
-    transform: scale(0.95); /* Slightly shrink button on click */
+    transform: scale(0.95);
 }
 
 .subcategory {
-    padding-left: 1.5rem; /* Reduce indentation for subcategories */
-    max-height: 0; /* Hidden by default */
-    overflow: hidden; /* Hide overflow */
-    transition: max-height 0.3s ease-out; /* Smooth transition */
+    padding-left: 1.5rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
 }
 
 .subcategory.show {
-    max-height: 20rem; /* Adjust as needed */
+    max-height: 20rem;
 }
 
 .subcategory a {
-    padding-left: 2rem; /* Reduce indentation for subcategory links */
-    font-size: 1rem; /* Smaller font size for subcategory links */
-    color: #e5e5e5; /* Light gray color for subcategory links */
+    padding-left: 2rem;
+    font-size: 1rem;
+    color: var(--nord5); /* Muted light gray for subcategory links */
 }
 
 .subcategory a:hover {
-    background-color: #a16b6f; /* Darker pink on hover */
+    background-color: var(--nord10); /* Very dark muted blue on hover */
 }
 
 /* Content Styles */
 .content {
-    width: calc(80% - 2rem); /* Remaining width */
-    height: calc(100% - 2rem); /* Full height minus margins */
+    width: calc(80% - 2rem);
+    height: calc(100% - 2rem);
     margin: 1%;
     padding: 2%;
-    border: 0.2rem solid #d7a1a6; /* Light pink border */
+    border: 0.2rem solid var(--nord3); /* Soft border */
     border-radius: 0.5rem;
-    background-color: #2d1b1f; /* Match wrapper background */
+    background-color: var(--nord1); /* Very dark background */
     box-sizing: border-box;
 }
 
 h1 {
     margin-top: auto;
     text-align: center;
-    font-size: 3rem; /* Larger font size */
-    color: #f5a8a1; /* Lighter pink color */
+    font-size: 3rem;
+    color: var(--nord7); /* Muted teal for headings */
 }
 
 .search-bar {
@@ -147,84 +166,89 @@ h1 {
     width: 70%;
     padding: 1rem;
     font-size: 1rem;
-    color: #d7a1a6; /* Light text color */
-    background-color: #5b3a3a; /* Darker background */
-    border: 0.1rem solid #5b3a3a; /* Darker border */
+    color: var(--nord6); /* Dimmed light text */
+    background-color: var(--nord2); /* Dark input background */
+    border: 0.1rem solid var(--nord2);
     border-radius: 0.5rem;
     outline: none;
-    transition: border-color 0.3s; /* Smooth transition */
+    transition: border-color 0.3s;
 }
 
 .search-bar input[type="text"]:focus {
-    border-color: #f5a8a1; /* Highlight border on focus */
+    border-color: var(--nord7); /* Muted teal on focus */
 }
 
 .search-bar button {
     margin-left: 1%;
     padding: 1rem 2rem;
     font-size: 1rem;
-    color: #2d1b1f; /* Dark text color */
-    background-color: #f5a8a1; /* Light pink background */
+    color: var(--nord0); /* Dark text */
+    background-color: var(--nord7); /* Muted dark teal button */
     border: none;
     border-radius: 0.5rem;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .search-bar button:hover {
-    background-color: #e59494; /* More noticeable darker pink */
-    transform: scale(1.05); /* Slightly scale up on hover */
+    background-color: var(--nord8); /* Slightly lighter blue-gray on hover */
+    transform: scale(1.05);
 }
 
 .search-bar button:active {
-    transform: scale(0.95); /* Slightly shrink button on click */
+    transform: scale(0.95);
 }
 
-/* Styles for the file grid and items */
+/* File Grid and Items */
 .file-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Increased min width */
-    gap: 1.5rem; /* Increased gap between items */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
     margin-top: 2rem;
-    padding: 0 1rem; /* Added padding to the grid for better spacing */
+    padding: 0 1rem;
 }
 
 .file-item {
-    background-color: #3d2a2f; /* Background color of file items */
-    padding: 1.5rem; /* Increased padding for better spacing */
-    border-radius: 0.5rem; /* Rounded corners */
-    text-align: center; /* Centered text */
-    transition: background-color 0.3s, transform 0.3s; /* Added transition for scaling effect */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    background-color: var(--nord2); /* Darker background for items */
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
 }
 
 .file-item a {
-    color: #d7a1a6; /* Link color */
-    text-decoration: none; /* Remove underline */
-    font-size: 1.2rem; /* Font size */
-    font-weight: bold; /* Bold text for emphasis */
-    display: inline-block; /* Block-level element for easier sizing */
-    padding: 0.5rem 1rem; /* Padding around links */
-    border-radius: 0.3rem; /* Rounded corners on links */
-    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effect */
+    color: var(--nord6); /* Light muted text */
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .file-item:hover {
-    background-color: #5b3a3a; /* Darker background on hover */
-    transform: translateY(-5px); /* Slight lift effect on hover */
+    background-color: var(--nord9); /* Dark muted blue on hover */
+    transform: translateY(-5px);
 }
 
 .file-item a:hover {
-    background-color: rgba(215, 161, 166, 0.2); /* Light background on link hover */
-    color: #fff; /* Change text color on hover */
+    background-color: rgba(96, 112, 136, 0.2); /* Soft blue-gray hover */
+    color: var(--nord6); /* Lighter text on hover */
 }
 
-/* Centering the no items found image */
-.file-grid img {
-    display: block; /* Ensures the image behaves like a block element */
-    margin: 1rem auto; /* Center horizontally and add vertical spacing */
-    max-width: 100%; /* Responsive width */
-    height: auto; /* Maintain aspect ratio */
+.center-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    width: 100%;   /* Full width */
+}
+
+.center-image img {
+    max-width: 100%; /* Make sure the image is responsive */
+    height: auto;
 }
 
 /* Popup Styles */
@@ -237,21 +261,21 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    z-index: 1000; /* Above other content */
-    visibility: hidden; /* Hidden by default */
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    visibility: hidden;
     opacity: 0;
-    transition: opacity 0.3s, visibility 0.3s; /* Smooth transition */
+    transition: opacity 0.3s, visibility 0.3s;
 }
 
 .popup-content {
     width: 80%;
-    max-width: 500px;
+    max-width: 30%;
     padding: 2rem;
     border-radius: 0.5rem;
-    background: #2d1b1f; /* Dark background */
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3); /* Shadow effect */
-    color: #d7a1a6; /* Light text color */
+    background: var(--nord1);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+    color: var(--nord6);
     text-align: left;
     position: relative;
 }
@@ -276,19 +300,17 @@ h1 {
     font-size: 2rem;
     font-weight: bolder;
     cursor: pointer;
-    color: #d7a1a6; /* Light color for close button */
-    background: #2d1b1f; /* Dark background */
+    color: var(--nord6);
+    background: var(--nord1);
     border: none;
 }
 
 .popup-show {
-    visibility: visible; /* Show popup */
+    visibility: visible;
     opacity: 1;
 }
 
-/* Blur effect if popup is visible */
 .blur {
-    filter: blur(5px); /* Adjust the blur amount as needed */
-    transition: filter 0.3s; /* Smooth transition */
+    filter: blur(5px);
+    transition: filter 0.3s;
 }
-
