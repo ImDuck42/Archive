@@ -238,19 +238,6 @@ h1 {
     color: var(--nord6); /* Lighter text on hover */
 }
 
-.center-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Full viewport height */
-    width: 100%;   /* Full width */
-}
-
-.center-image img {
-    max-width: 100%; /* Make sure the image is responsive */
-    height: auto;
-}
-
 /* Popup Styles */
 .popup {
     position: fixed;
