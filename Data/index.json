@@ -9,7 +9,7 @@
           "files": [
             { "name": "ToDo", "filename": "ToDo.txt" },
           ]
-        },
+        }
     },
     {
       "name": "Materials",
