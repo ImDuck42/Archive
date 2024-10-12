@@ -8,7 +8,8 @@
           "directory": "/Files/Ascention Materials",
           "files": [
             { "name": "Material 1", "filename": "HuTao_BG.jpeg" },
-            { "name": "Material 2", "filename": "Stress.txt" }
+            { "name": "Material 2", "filename": "Stress.txt" },
+            { "name": "ToDo", "filename": "ToDo.txt"}
           ]
         },
         {
