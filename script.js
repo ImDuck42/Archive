@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Determine base URL depending on the environment (localhost or GitHub Pages)
+    const baseUrl = window.location.href.includes('github.io') ? '/YourRepositoryName' : '';
+
     const popup = document.getElementById('popup');
     const popupClose = document.getElementById('popup-close');
     const wrapper = document.querySelector('.wrapper');
@@ -26,13 +29,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Load folders from index.json
-    fetch('Data/index.json')
+    fetch(`${baseUrl}/Data/index.json`)
         .then(response => response.json())
         .then(data => {
             data.folders.forEach(folder => {
                 // Create folder item
                 const folderItem = document.createElement('li');
-                
+
                 // Create toggle button
                 const toggleButton = document.createElement('button');
                 toggleButton.className = 'toggle-button';
@@ -49,6 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     subLink.href = '#'; // Prevent navigation
                     subLink.textContent = sub.name;
                     subLink.dataset.subcategory = sub.name; // Store subcategory name in data attribute
+                    subLink.dataset.directory = sub.directory; // Store the directory path from index.json
                     subLink.dataset.files = JSON.stringify(sub.files); // Store files directly in data attribute as JSON string
                     subItem.appendChild(subLink);
                     subcategory.appendChild(subItem);
@@ -85,40 +89,41 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     const files = JSON.parse(e.target.dataset.files); // Get the files from data attribute
                     const subcategoryName = e.target.dataset.subcategory; // Get the subcategory name from data attribute
-                    loadFiles(subcategoryName, files); // Load files from the selected subcategory
+                    const directory = e.target.dataset.directory; // Get the directory from data attribute
+                    loadFiles(subcategoryName, directory, files); // Load files from the selected subcategory
                 });
             });
         })
         .catch(error => console.error('Error loading index.json:', error));
 
     // Function to load files from a given subcategory
-    function loadFiles(subcategoryName, files) {
+    function loadFiles(subcategoryName, directory, files) {
         // Clear the current grid before adding new items
         fileGrid.innerHTML = '';
-    
+
         // Iterate over each file and create elements for the grid
         files.forEach(file => {
             const fileItem = document.createElement('div');
             fileItem.className = 'file-item';
-            
+
             // Create content for the file item (e.g., an image or a file link)
             const fileLink = document.createElement('a');
-            fileLink.href = `/Archive/Files/${subcategoryName}/${file.filename}`;   // Updated path to the file
+            fileLink.href = `${baseUrl}${directory}/${file.filename}`;   // Updated path to the file using directory from index.json
             fileLink.textContent = file.name; // Display file name
-            
+
             fileItem.appendChild(fileLink);
             fileGrid.appendChild(fileItem);
         });
     }
 
     // Search and filter files by name from index.json
-    window.filterFiles = function() {
+    window.filterFiles = function () {
         const query = document.getElementById('search').value.toLowerCase(); // Get the search query
         const fileGrid = document.getElementById('file-grid'); // Get the file grid element
         fileGrid.innerHTML = ''; // Clear the file grid before adding new items
 
         // Fetch the index.json file
-        fetch('Data/index.json')
+        fetch(`${baseUrl}/Data/index.json`)
             .then(response => response.json())
             .then(data => {
                 let matchingFiles = []; // Array to store matching files
@@ -134,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 if (file.name.toLowerCase().includes(query)) {
                                     matchingFiles.push({
                                         name: file.name,
-                                        path: `${subcategory.directory}/${file.filename}` // Construct the correct path
+                                        path: `${baseUrl}${subcategory.directory}/${file.filename}` // Construct the correct path using directory
                                     });
                                 }
                             });
@@ -155,7 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (files.length === 0) {
             fileGrid.innerHTML = '<p>No matching files found.</p>'; // Show a message if no files match
             const noItemsFound = document.createElement('img');
-            noItemsFound.src = 'Data/Images/Nope.png'; // Set the path to your image
+            noItemsFound.src = `${baseUrl}/Data/Images/Nope.png`; // Set the path to your image
             fileGrid.appendChild(noItemsFound); // Add image to the grid
             return;
         }
@@ -169,7 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const fileLink = document.createElement('a');
             fileLink.href = file.path; // Correct path to the file
             fileLink.textContent = file.name; // Display file name
-            
+
             // Append the link to the file item and add it to the file grid
             fileItem.appendChild(fileLink);
             fileGrid.appendChild(fileItem);
